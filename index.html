@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% block title%}Login{%endblock title%}
+{% block body %}
+<div class="container-fluid">
+    <form class="mx-auto formbg loginform" method="post" action="/login">
+        <h4 class="text-center">Login</h4>
+        <div class="mb-3">
+            <label for="useremail" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="useremail" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+            <label for="userpassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="userpassword">
+        </div>
+        <button type="submit" class="btn btn-primary btnbg" id="loginButton">Submit</button>
+        <div class="horizontal_dotted_line"></div>
+        <button type="button" class="btn btnbg btnsuccess" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Create new account
+        </button>
+    </form>
+    <!-- Modal -->
+    <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog d-flex align-items-center" style="min-height: 90%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Create a new account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="/Register">
+                        <div class="col-md-12 row">
+                            <div class="col-md-6 form-group">
+                                <label for="fname" class="form-label">First name</label>
+                                <input type="text" class="form-control" name="fname" id="fname"
+                                    placeholder="Enter your first name." required>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="lname" class="form-label">Last name</label>
+                                <input type="text" class="form-control" name="lname" id="lname"
+                                    placeholder="Enter your last name." required>
+                            </div>
+                        </div>
+                        <div class="col-md-12 row registerformmargin">
+                            <div class="col-md-12 form-group">
+                                <label for="femail" class="form-label">Email address</label>
+                                <input type="email" class="form-control" name="femail" id="femail"
+                                    placeholder="Enter your email address." required>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 row registerformmargin">
+                            <div class="col-md-12 form-group">
+                                <label for="fpassword" class="form-label">Enter password</label>
+                                <input type="password" class="form-control" name="fpassword" id="fpassword"
+                                    placeholder="Enter password." required>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+                <div class=" button-container" style="display: flex; margin-bottom: 15px;">
+                    <button id="formRegisterClick" type="submit" class="btn btnbg btnSignup btn-primary"
+                        style="margin: 15px;">Sign Up</button>
+                    <button type="button" class="btn btnbg btnSignup  btn-secondary" style="margin: 15px;"
+                        data-bs-dismiss="modal">Already have account?</button>
+                </div>
+                <div class="alert " role="alert" id="signupalert" style="display: none;">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal -->
+
+
+{% endblock body %}

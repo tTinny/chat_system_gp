@@ -1,0 +1,48 @@
+.formbg
+{
+    background-color: aliceblue;
+    padding: 50px;
+    border-radius: 20px;
+    margin-top: 150px;
+}
+
+.loginform
+{
+    width: 30%;
+}
+
+.registerform
+{
+    width: 50%;
+}
+.registerformmargin
+{
+    margin-top: 5px;
+}
+.containerbg
+{
+    background-color: rgb(148, 198, 242);
+}
+
+.btnbg
+{
+    width: 100%;
+    border-radius: 50px;
+}
+
+.btnSignup
+{
+    width: 50% !important; 
+    margin-top: 15px;
+}
+.btnsuccess
+{
+    background-color: #42b72a !important;
+    color: white !important;
+}
+.horizontal_dotted_line {
+    border-bottom: 1px solid grey;
+    width: 100%;
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block title%}Register{%endblock title%}
+{% block body %}
+<div class="container-fluid">
+    <form class="mx-auto formbg registerform">
+        <h4 class="text-center">Sign Up</h4>
+        <div class="col-md-12 row">
+            <div class="col-md-6 form-group">
+                <label for="name-f" class="form-label">First name</label>
+                <input type="text" class="form-control" name="fname" id="name-f" placeholder="Enter your first name."
+                    required>
+            </div>
+            <div class="col-md-6 form-group">
+                <label for="name-l" class="form-label">Last name</label>
+                <input type="text" class="form-control" name="lname" id="name-l" placeholder="Enter your last name."
+                    required>
+            </div>
+        </div>
+        <div class="col-md-12 row registerformmargin">
+            <div class="col-md-12 form-group">
+                <label for="email-f" class="form-label">Email address</label>
+                <input type="email" class="form-control" name="femail" id="email-f"
+                    placeholder="Enter your email address." required>
+            </div>
+        </div>
+
+        <div class="col-md-12 row registerformmargin">
+            <div class="col-md-12 form-group">
+                <label for="password-f" class="form-label">Enter password</label>
+                <input type="password" class="form-control" name="fpassword" id="password-f"
+                    placeholder="Enter password." required>
+            </div>
+        </div>
+
+        <div class="text-center">
+        <button id="signUpId" class="btn btnbg btnsuccess btnSignup float-center">Sign Up</button>
+        </div>
+    </form>
+</div>
+{% endblock body %}
